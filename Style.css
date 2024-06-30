@@ -9,6 +9,10 @@ body {
     margin-top: 50px;
 }
 
+i {
+  float: right;
+}
+
 h3 {
   font-size: 25px;
 } 
