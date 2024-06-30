@@ -11,7 +11,7 @@ body {
 
 h3 {
   font-size: 25px;
-  position: static;
+  position: relative;
 } 
 
 h1 {
