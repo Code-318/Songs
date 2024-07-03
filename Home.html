@@ -12,6 +12,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
   transition: 0.3s;
 }
 
+.MCF {
+   float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family:Papyrus,fantasy
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -105,7 +114,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <a href="News.html">News</a>
   <a href="Contact.html">Contact</a>
   <a href="Songs.html">Song Index</a>
-  <h2><u><strong><b>Milton Christian Fellowship</b></strong></u></h2>
+  <div class="MCF">
+  <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+   </div>
   <input type="text" class="sticky" id="search-bar" placeholder="Search...">
 </div>
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
