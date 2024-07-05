@@ -9,11 +9,6 @@ body {
     margin-top: 50px;
 }
 
-h3 {
-  font-size: 25px;
-  position: relative;
-} 
-
 .MCF {
    float: none;
   position: absolute;
@@ -21,10 +16,6 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family:Papyrus,fantasy
-}
-
-h1 {
-  text-align: center;
 }
 
 a { 
