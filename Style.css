@@ -18,6 +18,10 @@ body {
   font-family:Papyrus,fantasy
 }
 
+.h1 {
+  text-align: center;
+}
+
 a { 
   color: #000000;
 }
