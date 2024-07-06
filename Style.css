@@ -9,6 +9,10 @@ body {
     margin-top: 50px;
 }
 
+#item-list li {
+   text-align: center;
+}
+
 .MCF {
    float: none;
   position: absolute;
