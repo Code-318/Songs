@@ -1,7 +1,7 @@
 function checkPswd() {
-        var confirmWord = "Fart";
-        var word = document.getElementById("pswd").value;
-        if (word == confirmPassword) {
+        var confirmPassword = "Fart";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
              window.location.assign("Home.html")
         }
         else{
