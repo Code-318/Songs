@@ -6,7 +6,7 @@ let b = prompt('Enter the second variable: ');
 
 //create a temporary variable
 let temp;
-password SigmaRizz2000
+password - SigmaRizz2000
 //swap variables
 temp = a;
 a = b;
