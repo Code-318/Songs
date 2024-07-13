@@ -156,8 +156,10 @@ span.psw {
   </form>
 </div>
 <script>
-function checkPswd() {
-        var confirmPassword = "Church";
+if (password == confirmPassword && username == confirmUsername) {
+             window.location.assign("Home.html")
+}
+var confirmPassword = "Church";
         var confirmUsername = "MCF";
         var password = document.getElementById("pswd").value;
         var username = document.getElementById("uname").value;
@@ -168,7 +170,7 @@ function checkPswd() {
              let y = true;
         }
         if (x = true && y = true) {
-             window.location.assign("https://code-318.github.io/Songs/Home.html")
+             window.location.assign("Home.html")
         else{
             alert("Password or Username does not match.");
         }
