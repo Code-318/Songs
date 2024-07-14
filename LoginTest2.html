@@ -156,25 +156,20 @@ span.psw {
   </form>
 </div>
 <script>
-if (password == confirmPassword && username == confirmUsername) {
-             window.location.assign("Home.html")
-}
-var confirmPassword = "Church";
-        var confirmUsername = "MCF";
-        var password = document.getElementById("pswd").value;
-        var username = document.getElementById("uname").value;
-        if (password == confirmPassword) {
-             let x = true;
-        }
-        if (username == confirmUsername) {
-             let y = true;
-        }
-        if (x = true && y = true) {
-             window.location.assign("Home.html")
-        else{
-            alert("Password or Username does not match.");
-        }
+function checkPswd() {
+    var confirmPassword = "Church";
+    var confirmUsername = "MCF";
+    var password = document.getElementById("pswd").value;
+    var username = document.getElementById("uname").value;
+    
+    if (password === confirmPassword && username === confirmUsername) {
+        window.location.assign("Home.html");
+        return false;
+    } else {
+        alert("Password or Username does not match.");
+        return false;
     }
+}
 </script>
 <script>
 // Get the login
