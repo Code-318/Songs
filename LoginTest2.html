@@ -133,7 +133,7 @@ span.psw {
 
 <div id="id01" class="login">
   
-  <form class="login-content animate" action="/action_page.php" method="post">
+  <form class="login-content animate" onsubmit="return checkPswd()" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="theX" title="Close Login">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -144,9 +144,9 @@ span.psw {
       <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" id="pswd" placeholder="Enter Password" name="pswd">
+      <input type="password" id="pswd" placeholder="Enter Password" name="pswd" required>
         
-      <button value="Submit" onclick="checkPswd();" type="submit">Login</button>
+      <button type="submit">Login</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
@@ -163,15 +163,14 @@ function checkPswd() {
     var username = document.getElementById("uname").value;
     
     if (password === confirmPassword && username === confirmUsername) {
-        window.location.assign("https://code-318.github.io/Songs/Home.html");
+        window.location.assign("Home.html");
         return false;
     } else {
         alert("Password or Username does not match.");
         return false;
     }
 }
-</script>
-<script>
+
 // Get the login
 var login = document.getElementById('id01');
 
@@ -179,7 +178,7 @@ var login = document.getElementById('id01');
 window.onclick = function(event) {
     if (event.target == login) {
         login.style.display = "none";
-    } 
+    }
 }
 </script>
 
