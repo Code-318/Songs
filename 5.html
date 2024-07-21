@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2></h2>
+<p>
+Above the voices of the world around me,<br>
+my hopes and dreams, my cares and loves and fears,<br>
+the long-awaited call of Christ has found me,<br>
+the voice of Jesus echoes in my ears:<br>
+‘I gave my life to break the cords that bind you,<br>
+I rose from death to set your spirit free;<br>
+turn from your sins, and put the past behind you,<br>
+take up your cross and come and follow me.’<br>
+
+2. What can I offer him who calls me to him?<br>
+Only the wastes of sin and self and shame;<br>
+a mind confused, a heart that never knew him,<br>
+a tongue unskilled at naming Jesus’ name.<br>
+Yet at your call, and hungry for your blessing,<br>
+drawn by that cross which moves a heart of stone,<br>
+now Lord I come, my tale of sin confessing,<br>
+and in repentance turn to you alone.<br>
+
+3. Lord, I believe; help now my unbelieving;<br>
+I come in faith because your promise stands.<br>
+Your word of pardon and of peace receiving,<br>
+all that I am I place within your hands.<br>
+Let me become what you shall choose to make me,<br>
+freed from the guilt and burden of my sins.<br>
+Jesus is mine, who never shall forsake me,<br>
+and in his love my new-born life begins.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
