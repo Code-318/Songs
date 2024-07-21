@@ -11,7 +11,7 @@ p {
 
 #myBtnTwo {
   position: fixed;
-  top: 50px;
+  top: 48px;
   right: 30px;
   z-index: 99;
   font-size: 18px;
@@ -21,7 +21,7 @@ p {
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
+  border-radius:0 0 4px 4px;
   transition: top 0.3s;
 }
 
