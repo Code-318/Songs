@@ -58,13 +58,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function navFunction() {
         if (topnav.style.top === "-50px") {
             topnav.style.top = "0";
+            mybutton2.style.top = "60px";
         } else {
             topnav.style.top = "-50px";
-        }
-        if (myBtnTwo.style.top === "0") {
-            myBtnTwo.style.top = "60px";
-        } else {
-            myBtnTwo.style.top = "0";
+            mybutton2.style.top = "10px";  // Adjust as needed
         }
     }
 
