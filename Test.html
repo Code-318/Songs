@@ -1,0 +1,59 @@
+<html><head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;">Top</button>
+<h2>A New Commandment I Give Unto You (MP1)</h2>
+<p>
+A new commandment I give unto you,
+that you love one another as I have loved you,
+that you love one another as I have loved you.
+By this shall all know that you are my disciples,
+if you have love one for another;
+by this shall all know that you are my disciples:
+if you have love one for another.
+</p><button id="myBtnTwo" onclick="navFunction()">agahe</button>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+let mybutton2 = document.getElementById("myBtnTwo");
+
+function navFunction() {
+    document.getElementById("topnav").style.top = "-50px";
+}
+</script>
+
+
+</body></html>
