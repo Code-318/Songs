@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>Abide with me; fast falls the eventide</h2>
+<p>
+1 Abide with me: fast falls the eventide;<br>
+the darkness deepens; Lord, with me abide.<br>
+When other helpers fail and comforts flee,<br>
+Help of the helpless, O abide with me.<br><br>
+2 Swift to its close ebbs out life's little day;<br>
+earth's joys grow dim, its glories pass away.<br>
+Change and decay in all around I see.<br>
+O thou who changest not, abide with me.<br><br>
+3 I need thy presence every passing hour.<br>
+What but thy grace can foil the tempter's power?<br>
+Who like thyself my guide and strength can be?<br>
+Through cloud and sunshine, O abide with me.<br><br>
+4 I fear no foe with thee at hand to bless,<br>
+ills have no weight, and tears no bitterness.<br>
+Where is death's sting? Where, grave, thy victory?<br>
+I triumph still, if thou abide with me.<br><br>
+5 Hold thou thy cross before my closing eyes.<br>
+Shine through the gloom and point me to the skies.<br>
+Heaven's morning breaks and earth's vain shadows flee;<br>
+in life, in death, O Lord, abide with me.
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
