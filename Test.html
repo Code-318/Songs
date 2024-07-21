@@ -5,6 +5,15 @@
 <link rel="stylesheet" href="Style.css">
 <link rel="stylesheet" href="Songs.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* Add some basic styling for the navbar transition */
+    .topnav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: top 0.3s;
+    }
+</style>
 </head>
 <body>
 <div class="topnav" id="topnav">
@@ -28,7 +37,7 @@ if you have love one for another;
 by this shall all know that you are my disciples:
 if you have love one for another.
 </p>
-<button id="myBtnTwo" onclick="navFunction()">agahe</button>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
 
 <script>
 // Ensure the script runs after the DOM is fully loaded
@@ -36,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get the buttons
     let mybutton = document.getElementById("myBtn");
     let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
 
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
@@ -55,7 +65,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function navFunction() {
-        document.getElementById("topnav").style.top = "-50px";
+        if (topnav.style.top === "-50px") {
+            topnav.style.top = "0";
+        } else {
+            topnav.style.top = "-50px";
+        }
     }
 
     // Attach the topFunction to the myBtn button
