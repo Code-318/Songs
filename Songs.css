@@ -23,7 +23,6 @@ p {
   padding: 15px;
   border-radius:0 0 10px 10px;
   transition: top 0.3s;
-  height: 60px;
 }
 
 #myBtnTwo:hover {
