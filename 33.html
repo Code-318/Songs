@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>33. And can it be that I should gain</h2>
+<p>
+And can it be that I should gain<br>
+An int'rest in the Savior's blood?<br>
+Died He for me, who caused His pain?<br>
+For me, who Him to death pursued?<br>
+Amazing love! how can it be<br>
+That Thou, my God, should die for me?<br>
+<br>
+<i>Amazing love! how can it be<br>
+That Thou, my God, should die for me!</i><br>
+<br>
+'Tis mystery all! Th'Immortal dies!<br>
+Who can explore His strange design?<br>
+In vain the firstborn seraph tries<br>
+To sound the depths of love divine!<br>
+'Tis mercy all! let earth adore,<br>
+Let angel minds inquire no more.<br>
+<br>
+He left His Father's throne above,<br>
+So free, so infinite His grace;<br>
+Emptied Himself of all but love,<br>
+And bled for Adam's helpless race;<br>
+'Tis mercy all, immense and free;<br>
+For, O my God, it found out me.<br>
+
+Long my imprisoned spirit lay<br>
+Fast bound in sin and nature's night;<br>
+Thine eye diffused a quick'ning ray,<br>
+I woke, the dungeon flamed with light;v
+My chains fell off, my heart was free;<br>
+I rose, went forth and followed Thee.<br>
+  <br>
+No condemnation now I dread;<br>
+Jesus, and all in Him is mine!<br>
+Alive in Him, my living Head,<br>
+And clothed in righteousness divine,<br>
+Bold I approach th'eternal throne,<br>
+And claim the crown, through Christ my own.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
