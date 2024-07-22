@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>16. All my hope on God is founded</h2>
+<p>
+All my hope on God is founded, <br>
+all my trust he shall renew;<br>
+he, my guide through changing order,<br>
+only good and only true:<br>
+God unknown,<br>
+he alone,<br>
+calls my heart to be his own.<br>
+<br>
+2. Pride of man and earthly glory,<br>
+sword and crown betray his trust;<br>
+what with care and toil we fashion,<br>
+tower and temple, fall to dust;<br>
+but God’s power<br>
+hour by hour<br>
+is my temple and my tower.<br>
+<br>
+3. Day by day the almighty Giver<br>
+grants to us his gifts of love;<br>
+in his will our souls find pleasure,<br>
+leading to our home above:<br>
+love shall stand<br>
+at his hand,<br>
+joy shall wait on his command.<br>
+<br>
+4. Still from man to God eternal<br>
+sacrifice of praise be done;<br>
+high above all praises praising<br>
+for the gift of Christ his Son:<br>
+hear Christ’s call,<br>
+one and all-<br>
+those who follow shall not fall.
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
