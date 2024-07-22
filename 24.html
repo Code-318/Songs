@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>All Things Praise Thee, Lord Most High</h2>
+<p>
+1 All things praise thee, Lord most high,<br>
+heaven and earth and sea and sky,<br>
+all were for your glory made,<br>
+that thy greatness thus displayed,<br>
+should all worship bring to thee;<br>
+all things praise thee: Lord, may we.<br><br>
+2 All things praise thee: night to night<br>
+sings in silent hymns of light:<br>
+all things praise thee: day to day<br>
+chants thy power in burning ray;<br>
+time and space are praising thee:<br>
+all things praise thee: Lord, may we.<br><br>
+3 All things praise thee, high and low,<br>
+rain and dew, and seven-hued bow,<br>
+crimson sunset, fleecy cloud,<br>
+rippling stream, and tempest loud,<br>
+summer, winter – all to thee<br>
+glory render: Lord, may we.<br><br>
+4 All things praise thee, heaven's high shrine<br>
+rings with melody divine;<br>
+lowly bending at thy feet,<br>
+seraph and archangel meet;<br>
+this their highest bliss, to be<br>
+ever praising: Lord, may we.<br><br>
+5 All things praise thee, gracious Lord,<br>
+great Creator, powerful Word,<br>
+omnipresent Spirit, now<br>
+at thy feet we humbly bow,<br>
+lift our hearts in praise to thee;<br>
+all things praise thee: Lord, may we.
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
