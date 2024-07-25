@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>41. At the name of Jesus</h2>
+<p>
+At the name of Jesus<br>
+ev'ry knee shall bow,<br>
+ev'ry tongue confess him<br>
+King of glory now;<br>
+'tis the Father's pleasure<br>
+we should call him Lord,<br>
+who from the beginning<br>
+was the mighty Word.<br><br>
+At his voice creation<br>
+sprang at once to sight,<br>
+all the angel faces,<br>
+all the hosts of light,<br>
+cherubim in heaven,<br>
+stars upon their way,<br>
+all the heav'nly orders<br>
+in their great array.<br><br>
+Humbled for a season<br>
+to receive a name<br>
+from the lips of sinners<br>
+unto whom he came,<br>
+faithfully he bore it<br>
+spotless to the last,<br>
+brought it back victorious<br>
+when from death he passed;<br><br>
+Bore it up triumphant<br>
+with its human light,<br>
+thro' all ranks of creatures<br>
+to the central height,<br>
+to the throne of Godhead,<br>
+to the Father's breast,<br>
+filled it with the glory<br>
+of that perfect rest.<br><br>
+In your hearts enthrone him;<br>
+there let him subdue<br>
+all that is not holy,<br>
+all that is not true;<br>
+crown him as your captain<br>
+in temptation's hour;<br>
+let his will enfold you<br>
+in its light and pow'r.<br><br>
+Christians, this Lord Jesus<br>
+shall return again<br>
+in his Father's glory,<br>
+with his angel train;<br>
+for all wreaths of empire<br>
+meet upon his brow,<br>
+and our hearts confess him<br>
+King of glory now.
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
