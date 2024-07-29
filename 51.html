@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>51. Be Thou my vision</h2>
+<p>
+Be Thou my Vision, O Lord of my heart;<br>
+be all else but naught to me, save that Thou art;<br>
+be Thou my best thought in the day and the night,<br>
+both waking and sleeping, Thy presence my light.<br><br>
+2 Be Thou my Wisdom, be Thou my true Word;<br>
+be Thou ever with me and I with Thee, Lord;<br>
+be Thou my great Father, and I Thy true son,<br>
+be Thou in me dwelling, and I with Thee one.<br><br>
+3 Be Thou my Breastplate, my Sword for the fight;<br>
+be Thou my whole Armor, be Thou my true Might;<br>
+be Thou my soul’s Shelter, be Thou my strong Tow’r,<br>
+O raise Thou me heav’nward, great Pow’r of my pow’r.<br><br>
+4 Riches I heed not, nor man's empty praise,<br>
+be Thou mine inheritance, now and always;<br>
+be Thou and Thou only the first in my heart,<br>
+O High King of heaven, my Treasure Thou art.<br><br>
+5 High King of heaven, Thou heaven's bright Sun,<br>
+Great Heart of my own heart, whatever befall,<br>
+still be Thou my Vision, O Ruler of all.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
