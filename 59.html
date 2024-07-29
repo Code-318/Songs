@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>59. Blessed assurance</h2>
+<p>
+Blessed assurance, Jesus is mine!<br>
+Oh, what a foretaste of glory divine!<br>
+Heir of salvation, purchase of God,<br>
+born of his Spirit, washed in his blood.<br><br>
+<i>This is my story, this is my song,<br>
+praising my Savior all the day long.<br>
+This is my story, this is my song,<br>
+praising my Savior all the day long.</i><br><br>
+Perfect communion, perfect delight,<br>
+visions of rapture now burst on my sight.<br>
+Angels descending bring from above<br>
+echoes of mercy, whispers of love.<br><br>
+3 Perfect submission, all is at rest.<br>
+I in my Savior am happy and bless’d,<br>
+watching and waiting, looking above,<br>
+filled with his goodness, lost in his love.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
