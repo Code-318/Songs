@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>241. Holy Spirit, we welcome you</h2>
+<p>
+Holy Spirit, we welcome you<br>
+Holy Spirit, we welcome you<br>
+Move amongst us with holy fire<br>
+As we lay aside all earthly desire<br>
+Hands reach out and hearts aspire<br>
+Holy Spirit, Holy Spirit,<br>
+Holy Spirit, we welcome you<br>
+<br>
+Holy Spirit, we welcome you<br>
+Holy Spirit, we welcome you<br>
+Let the breeze of your presence flow<br>
+That your children here might truly know<br>
+How to move in the spirit's flow<br>
+Holy Spirit, Holy Spirit,<br>
+Holy Spirit, we welcome you<br>
+<br>
+Holy Spirit, we welcome you<br>
+Holy Spirit, we welcome you<br>
+Please accomplish in me today<br>
+Some new work of loving grace, We pray<br>
+Unreservedly have your way<br>
+Holy Spirit, Holy Spirit, <br>
+Holy Spirit, we welcome you<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
