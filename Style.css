@@ -62,7 +62,6 @@ body {margin:0;}
   width: 100%;
   z-index: 98;
   transition: top 0.3s;
-  height: 5%;
 }
 
 .topnav a {
