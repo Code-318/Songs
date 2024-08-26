@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>450. Love lifted me</h2>
+<p>
+I was sinking deep in sin,<br>
+Far from the peaceful shore,<br>
+Very deeply stained within,<br>
+Sinking to rise no more;<br>
+But the Master of the sea<br>
+Heard my despairing cry,<br>
+From the waters lifted me–<br>
+Now safe am I.<br><br>
+
+Love lifted me,<br>
+Love lifted me,<br>
+When nothing else could help,<br>
+Love lifted me;<br>
+Love lifted me,<br>
+Love lifted me,<br>
+When nothing else could help,<br>
+Love lifted me.<br><br>
+2 All my heart to Him I give,<br>
+Ever to Him I'll cling,<br>
+In His blessed presence live,<br>
+Ever His praises sing.<br>
+Love so mighty and so true<br>
+Merits my soul's best songs;<br>
+Faithful, loving service, too,<br>
+To Him belongs.<br><br>
+3 Souls in danger, look above,<br>
+Jesus completely saves;<br>
+He will lift you by His love<br>
+Out of the angry waves.<br>
+He's the Master of the sea,<br>
+Billows His will obey;<br>
+He your Savior wants to be–<br>
+Be saved today.
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
