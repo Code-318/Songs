@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>445. Lord, the light of Your love</h2>
+<p>
+Lord, the light of your love is shining<br>
+In the midst of the darkness, shining<br>
+Jesus, Light of the world, shine upon us<br>
+Set us free by the truth you now bring us<br>
+Shine on me, shine on me<br>
+<br>
+Shine, Jesus, shine<br>
+Fill this land with the Father’s glory<br>
+Blaze, Spirit, blaze<br>
+Set our hearts on fire<br>
+Flow, river, flow<br>
+Flood the nations with grace and mercy<br>
+Send forth your word<br>
+Lord, and let there be light<br>
+<br>
+Lord, I come to your awesome presence<br>
+From the shadows into your radiance<br>
+By the blood I may enter your brightness<br>
+Search me, try me, consume all my darkness<br>
+Shine on me, shine on me<br>
+<br>
+As we gaze on your kingly brightness<br>
+So our faces display your likeness<br>
+Ever changing from glory to glory<br>
+Mirrored here may our lives tell your story<br>
+Shine on me, shine on me<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
