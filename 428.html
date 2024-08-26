@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>428. Lord, for the years</h2>
+<p>
+Lord, for the years your love has kept and guided,<br>
+urged and inspired us, cheered us on our way,<br>
+sought us and saved us, pardoned and provided:<br>
+Lord of the years, we bring our thanks today.<br>
+<br>
+2 Lord, for that word, the word of life which fires us,<br>
+speaks to our hearts and sets our souls ablaze,<br>
+teaches and trains, rebukes us and inspires us:<br>
+Lord of the word, receive Your people's praise.<br>
+<br>
+3 Lord, for our land in this our generation,<br>
+spirits oppressed by pleasure, wealth and care:<br>
+for young and old, for commonwealth and nation,<br>
+Lord of our land, be pleased to hear our prayer.<br>
+<br>
+4 Lord, for our world when we disown and doubt him,<br>
+loveless in strength, and comfortless in pain,<br>
+hungry and helpless, lost indeed without him:<br>
+Lord of the world, we pray that Christ may reign.<br>
+<br>
+5 Lord for ourselves; in living power remake us -<br>
+self on the cross and Christ upon the throne,<br>
+past put behind us, for the future take us:<br>
+Lord of our lives, to live for Christ alone.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
