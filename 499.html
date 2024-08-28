@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>499. O happy day</h2>
+<p>
+O happy day that fixed my choice<br>
+On Thee, my Savior and my God!<br>
+Well may this glowing heart rejoice,<br>
+And tell its raptures all abroad.<br>
+<br>
+<i>Happy day, happy day,<br>
+When Jesus washed my sins away!<br>
+He taught me how to watch and pray,<br>
+And live rejoicing every day;<br>
+Happy day, happy day,<br>
+When Jesus washed my sins away!</i><br><br>
+'Tis done, the great transaction's done;<br>
+I am my Lord's and He is mine;<br>
+He drew me and I followed on,<br>
+Rejoiced to own the call divine.<br><br>
+Now rest, my long-divided heart,<br>
+Fixed on this blissful center, rest;<br>
+Here have I found a nobler part,<br>
+Here heavenly pleasures fill my breast.<br><br>
+High heaven that hears the solemn vow,<br>
+That vow renewed shall daily hear;<br>
+Till in life's latest hour I bow,<br>
+And bless, in death, a bond so dear.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
