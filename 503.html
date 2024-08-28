@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>503. O little town of Bethlehem</h2>
+<p>
+O little town of Bethlehem,<br>
+how still we see thee lie!<br>
+Above thy deep and dreamless sleep<br>
+the silent stars go by.<br>
+Yet in thy dark streets shineth<br>
+the everlasting light;<br>
+the hopes and fears of all the years<br>
+are met in thee tonight.<br><br>
+2 For Christ is born of Mary;<br>
+and, gathered all above,<br>
+while mortals sleep, the angels keep<br>
+their watch of wond'ring love.<br>
+O morning stars, together<br>
+proclaim the holy birth,<br>
+and praises sing to God the King,<br>
+and peace to men on earth.<br><br>
+3 How silently, how silently,<br>
+the wondrous gift is giv'n!<br>
+So God imparts to human hearts<br>
+the blessings of His heav'n.<br>
+No ear may hear His coming,<br>
+but in this world of sin,<br>
+where meek souls will receive Him still,<br>
+the dear Christ enters in.<br><br>
+4 O holy Child of Bethlehem,<br>
+descend to us, we pray;<br>
+cast out our sin and enter in;<br>
+be born in us today.<br>
+We hear the Christmas angels,<br>
+the great glad tidings tell;<br>
+O come to us, abide with us,<br>
+our Lord Emmanuel!<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
