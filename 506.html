@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>506. O Lord my God!</h2>
+<p>
+O Lord my God! When I in awesome wonder<br>
+consider all the works thy hand hath made,<br>
+I see the stars, I hear the mighty thunder,<br>
+thy power throughout the universe displayed;<br>
+<br>
+<i>Then sings my soul, my Saviour God, to thee,<br>
+how great thou art, how great thou art!<br>
+Then sings my soul, my Saviour God, to thee,<br>
+how great thou art, how great thou art!</i><br>
+<br>
+When through the woods and forest glades I wander<br>
+and hear the birds sing sweetly in the trees;<br>
+when I look down from lofty mountain grandeur<br>
+and hear the brook and feel the gentle breeze:<br>
+<br>
+
+And when I think that God, his Son not sparing,<br>
+sent him to die – I scarce can take it in<br>
+that on the cross, my burden gladly bearing,<br>
+he bled and died to take away my sin:<br>
+<br>
+
+When Christ shall come with shouts of acclamation<br>
+and take me home – what joy shall fill my heart!<br>
+Then shall I bow in humble adoration<br>
+and there proclaim, ‘my God, how great thou art!’<br>
+<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
