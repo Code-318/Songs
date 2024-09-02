@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<h2>543. Onward, Christian soldiers</h2>
+<p>
+Onward, Christian soldiers,<br>
+marching as to war,<br>
+With the cross of Jesus<br>
+going on before!<br>
+Christ, the royal Master,<br>
+leads against the foe;<br>
+Forward into battle,<br>
+see his banner go!<br>
+<br>
+<i>Onward, Christian soldiers,<br>
+marching as to war,<br>
+With the cross of Jesus<br>
+going on before!</i><br><br>
+2 At the sign of triumph<br>
+Satan's host doth flee;<br>
+On, then, Christian soldiers,<br>
+on to victory!<br>
+Hell's foundations quiver<br>
+at the shout of praise;<br>
+Brothers, lift your voices,<br>
+loud your anthems raise!<br><br>
+3 Like a mighty army<br>
+moves the church of God;<br>
+Brothers, we are treading<br>
+where the saints have trod;<br>
+We are not divided;<br>
+all one body we,<br>
+One in hope and doctrine,<br>
+one in charity. <br><br>
+4 Onward, then, ye people,<br>
+join our happy throng,<br>
+Blend with ours your voices<br>
+in the triumph song;<br>
+Glory, laud, and honor,<br>
+unto Christ the King;<br>
+This thro' countless ages<br>
+men and angels sing.<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+
+<script>
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the buttons
+    let mybutton = document.getElementById("myBtn");
+    let mybutton2 = document.getElementById("myBtnTwo");
+    let topnav = document.getElementById("topnav");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            mybutton2.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            mybutton2.style.top = "0";  // Adjust as needed
+        }
+    }
+
+    // Attach the topFunction to the myBtn button
+    mybutton.onclick = topFunction;
+
+    // Attach the navFunction to the myBtnTwo button
+    mybutton2.onclick = navFunction;
+});
+</script>
+</body>
+</html>
