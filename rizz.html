@@ -9,6 +9,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* Top Navigation Bar */
         .topnav {
             background-color: #333;
             overflow: hidden;
@@ -38,7 +39,6 @@
             display: none;
         }
 
-        /* Style the search bar */
         .topnav input[type="text"] {
             float: right;
             padding: 6px;
@@ -48,28 +48,104 @@
             font-size: 17px;
         }
 
-        /* Responsive layout - stack links vertically on small screens */
+        /* Modal Styles */
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .big {
+            border: none;
+            cursor: pointer;
+            appearance: none;
+            background-color: inherit;
+            transition: transform .7s ease-in-out;
+            margin-left: 10px;
+        }
+
+        .big:hover {
+            transform: rotate(360deg);
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Pop-up Modal */
+        .pop {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .pop-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Responsive layout */
         @media screen and (max-width: 600px) {
             .topnav a {
-                display: none; /* Hide menu items by default */
+                display: none;
             }
+
             .topnav a.icon {
                 float: right;
                 display: block;
             }
+
             .topnav.responsive a {
                 float: none;
-                display: block; /* Display menu items in block mode on small screens */
+                display: block;
                 text-align: left;
             }
+
             .topnav input[type="text"] {
-                display: none; /* Hide search bar on small screens */
+                display: none;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- Top Navigation -->
 <div class="topnav" id="myTopnav">
     <a href="Home.html" class="active">Home</a>
     <a href="News.html">News</a>
@@ -79,67 +155,58 @@
         <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
     </div>
     <input type="text" id="search-bar" placeholder="Search...">
-    <!-- Hamburger icon -->
     <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
 </div>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
-        <h2>About Us:</h2>
-        <h3>Welcome to Milton Christian Fellowship! We are delighted to have you with us...</h3>
-    </li>
+
 <ul id="item-list">
-<li><h2>About Us:</h2><h3>Welcome to Milton Christian Fellowship! We are delighted to have you with us. We are a lively community of Christians working to advance Christ's Kingdom in Weston-super-Mare.
-Our church is a warm and inviting community where everyone is welcome. Explore a vast collection of Christian songs, stay updated with the latest news, and more!</h3></li>
-<li><h2>Services and Events:</h2><strong>Sunday Services:</strong> 10:30AM and 6PM available both in Church and on Zoom.<br>
-<strong>Prayer Meetings:</strong> Tuesday and Thursday, also available in Church and on Zoom. <br>
-  <b>(All meetings are 1.5hr long)</b><br>
-<button class="big" id="myBob"><img style="width:42px;height:42px;" src="zoom.png"></button>
-
-<div id="myPop" class="pop" style="display: none;">
-
-  <div class="pop-content">
-    <div class="pop-header">
-      <span class="close">×</span>
-      <h2>Zoom</h2>
-    </div>
-    <div class="pop-body">
-      <p>Meeting ID: 8915006548</p>
-      <p>Password: 828962</p>
-      <p>Dial in: 01314601196 Or 02030512874</p>
-    </div>
-    <div class="pop-footer">
-      <a href="https://zoom.us/"><img class="fa" style="width:42px;height:42px;" src="zoom.png"></a>
-    </div>
-  </div>
-
-</div>
-</li>
-<li><h2>Featured Song of the Week:</h2><strong>(MP217) He is Exalted</strong>
-<em>Author: 	Twila Paris</em>
-Made in 1985 by StraightWay Music and Mountain Spring Music<br><br>
-</li>
-<li><h2>Ministries We Support:</h2>
-<strong>Release International:</strong><br> Founded in 1968, Release International is a UK-based Christian ministry, supporting believers around the world <br>who are persecuted for Christ and the gospel.<br>
-<a href="https://releaseinternational.org"><img style="width:42px;height:42px;border-radius:50%;border-style:solid;border-width:2px;" src="Release.png"></a><a>
-<br><br><strong>Living Waters Village:</strong><br> Set in the heart of the West Kalimantan Jungle, Living Waters Village has grown to be a home for over 700 Dayak children. <br>Living Waters Village is truly a Miracle Zone. 
-<br></a><a href="https://www.livingwatersvillage.com/"><img style="width:42px;height:42px;border-radius:50%;border-style:solid;border-width:2px;" src="livingWaters.png"></a><a>
-</a></li></ul>
-
+    <li>
+        <h2>About Us:</h2>
+        <h3>Welcome to Milton Christian Fellowship! We are delighted to have you with us. We are a lively community of Christians working to advance Christ's Kingdom...</h3>
+    </li>
+    <li>
+        <h2>Services and Events:</h2>
+        <strong>Sunday Services:</strong> 10:30AM and 6PM available both in Church and on Zoom.<br>
+        <strong>Prayer Meetings:</strong> Tuesday and Thursday.<br>
+        <b>(All meetings are 1.5hr long)</b><br>
+        <button class="big" id="myBob"><img style="width:42px;height:42px;" src="zoom.png"></button>
+        <div id="myPop" class="pop" style="display: none;">
+            <div class="pop-content">
+                <div class="pop-header">
+                    <span class="close">×</span>
+                    <h2>Zoom</h2>
+                </div>
+                <div class="pop-body">
+                    <p>Meeting ID: 8915006548</p>
+                    <p>Password: 828962</p>
+                    <p>Dial in: 01314601196 Or 02030512874</p>
+                </div>
+                <div class="pop-footer">
+                    <a href="https://zoom.us/"><img class="fa" style="width:42px;height:42px;" src="zoom.png"></a>
+                </div>
+            </div>
+        </div>
+    </li>
+    <!-- Add other list items -->
+</ul>
 
 <script>
-// Function to toggle menu visibility in mobile view
+// Toggle the responsive class on menu
 function toggleMenu() {
     var topnav = document.getElementById("myTopnav");
     if (topnav.className === "topnav") {
-        topnav.className += " responsive"; // Add 'responsive' class to show dropdown
+        topnav.className += " responsive";
     } else {
-        topnav.className = "topnav"; // Remove 'responsive' class to hide dropdown
+        topnav.className = "topnav";
     }
 }
 
-// Scroll to top button functionality
+// Scroll function for "Back to top" button
 let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    scrollFunction();
+};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -152,6 +219,39 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+// Zoom image modal
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Close the modal
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Pop-up function for Zoom meeting details
+var pop = document.getElementById("myPop");
+var bob = document.getElementById("myBob");
+var fryingpan = document.getElementsByClassName("close")[0];
+bob.onclick = function myFunction() {
+    pop.style.display = "block";
+}
+fryingpan.onclick = function myFunction() {
+    pop.style.display = "none";
+}
+window.onclick = function myFunction(event) {
+    if (event.target == pop) {
+        pop.style.display = "none";
+    }
 }
 </script>
 
