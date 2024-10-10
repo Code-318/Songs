@@ -83,6 +83,16 @@ body {margin:0;}
   font-size: 17px;
 }
 
+#myTopnav {
+    transition: top 0.3s ease; /* Add transition for smooth sliding */
+    position: relative; /* Ensure position is relative for top property */
+    top: 0; /* Initial position */
+}
+
+.topnav.responsive {
+    top: -48px; /* Adjust according to your navbar height */
+}
+
 .topnav a:hover {
   background: #ddd;
   color: black;
