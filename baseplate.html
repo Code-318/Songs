@@ -60,7 +60,6 @@ function myFunction() {
 </script>
   
 <script>
-<script>
 document.addEventListener("DOMContentLoaded", function() {
     let mybutton = document.getElementById("myBtn");
     let mybutton2 = document.getElementById("myBtnTwo");
@@ -84,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function navFunction() {
-        if (topnav.className === "topnav") {
-            topnav.className += " responsive"; // Add responsive class
+        if (topnav.classList.contains("responsive")) {
+            topnav.classList.remove("responsive"); // Remove responsive class to move navbar down
         } else {
-            topnav.className = "topnav"; // Remove responsive class
+            topnav.classList.add("responsive"); // Add responsive class to move navbar up
         }
     }
 
@@ -97,8 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Assign the hamburger menu button to the same navFunction
     document.querySelector('.icon').onclick = navFunction;
 });
-</script>
-
 </script>
 </body>
 </html>
