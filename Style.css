@@ -94,9 +94,9 @@ body {margin:0;}
     transition: top 0.3s ease; /* Smooth transition */
 }
 
-.topnav.offscreen {
-    top: -60px; /* Adjust based on your navbar height */
-    transition: top 0.3s ease; /* Smooth transition */
+.offscreen {
+    transform: translateX(-100%); /* Moves the navbar off the screen */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .topnav a:hover {
