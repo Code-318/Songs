@@ -61,7 +61,7 @@ body {margin:0;}
   top: 0;
   width: 100%;
   z-index: 98;
-  transition: top 0.3s;
+  transition: top 0.3s ease;
 }
 
 .topnav a {
@@ -95,7 +95,7 @@ body {margin:0;}
 }
 
 .topnav.offscreen {
-    top: -60px; /* Adjust this value based on your navbar height */
+    top: -60px; /* Adjust based on your navbar height */
     transition: top 0.3s ease; /* Smooth transition */
 }
 
