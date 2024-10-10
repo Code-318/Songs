@@ -90,7 +90,8 @@ body {margin:0;}
 }
 
 .topnav.responsive {
-    top: -48px; /* Adjust according to your navbar height */
+    top: -60px; /* Adjust this value according to your navbar height */
+    transition: top 0.3s ease; /* Smooth transition */
 }
 
 .topnav a:hover {
