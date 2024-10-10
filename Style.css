@@ -83,7 +83,7 @@ body {margin:0;}
   font-size: 17px;
 }
 
-#myTopnav {
+.topnav {
     transition: top 0.3s ease; /* Add transition for smooth sliding */
     position: relative; /* Ensure position is relative for top property */
     top: 0; /* Initial position */
