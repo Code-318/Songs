@@ -202,6 +202,22 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
+  .MCF {
+    pointer-events: none; /* Prevent clicks */
+    font-size: 14px; /* Optionally reduce the font size */
+  }
+
+  .MCF a {
+    pointer-events: none; /* Disable link functionality */
+  }
+
+  #mcf-text {
+    margin: 0;
+    padding: 0;
+  }
+}
+  
+@media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .topnav input.sticky {
     display: none;
   }
