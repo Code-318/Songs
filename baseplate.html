@@ -82,19 +82,25 @@ document.addEventListener("DOMContentLoaded", function() {
         document.documentElement.scrollTop = 0;
     }
 
-    function navFunction() {
+    // Hamburger button functionality
+    document.querySelector('.icon').onclick = function() {
         if (topnav.classList.contains("responsive")) {
-            topnav.classList.remove("responsive"); // Remove responsive class to move navbar down
+            topnav.classList.remove("responsive"); // Collapse the menu
         } else {
-            topnav.classList.add("responsive"); // Add responsive class to move navbar up
+            topnav.classList.add("responsive"); // Expand the menu
         }
-    }
+    };
+
+    // Toggle button functionality
+    mybutton2.onclick = function() {
+        if (topnav.classList.contains("offscreen")) {
+            topnav.classList.remove("offscreen"); // Bring navbar back into view
+        } else {
+            topnav.classList.add("offscreen"); // Push navbar off the screen
+        }
+    };
 
     mybutton.onclick = topFunction;
-    mybutton2.onclick = navFunction;
-
-    // Assign the hamburger menu button to the same navFunction
-    document.querySelector('.icon').onclick = navFunction;
 });
 </script>
 </body>
