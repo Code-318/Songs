@@ -90,8 +90,24 @@ body {margin:0;}
 }
 
 .topnav.responsive {
-    display: block; /* Ensure it shows when responsive */
-    transition: top 0.3s ease; /* Smooth transition */
+    position: relative; /* Or 'absolute', depending on your layout */
+}
+
+.topnav.responsive a {
+    float: none; /* Stacks the links vertically */
+    display: block; /* Makes the links take up the full width */
+    text-align: left; /* Aligns text to the left */
+}
+
+.topnav.responsive input.sticky {
+    display: block; /* Shows the search bar */
+    width: 100%; /* Full width on smaller screens */
+}
+
+.topnav.responsive .MCF {
+    float: none; /* Centers the title */
+    text-align: center; /* Aligns title text */
+    width: 100%; /* Full width on smaller screens */
 }
 
 .offscreen {
