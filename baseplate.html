@@ -31,12 +31,6 @@
 
 <button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the buttons
-    let mybutton = document.getElementById("myBtn");
-    let mybutton2 = document.getElementById("myBtnTwo");
-    let topnav = document.getElementById("topnav");
-  
 // Function to change the text between "Milton Christian Fellowship" and "MCF"
 function changeText() {
   var titleElement = document.getElementById("mcf-text");
@@ -66,13 +60,12 @@ function myFunction() {
 function navFunction() {
         if (topnav.style.top === "-48px") {
             topnav.style.top = "0";
-            mybutton2.style.top = "48px";
+            myBtnTwo.style.top = "48px";
         } else {
             topnav.style.top = "-48px";
-            mybutton2.style.top = "0";  // Adjust as needed
+            myBtnTwo.style.top = "0";  // Adjust as needed
         }
     }
-});
 </script>
 </body>
 </html>
