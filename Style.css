@@ -90,7 +90,12 @@ body {margin:0;}
 }
 
 .topnav.responsive {
-    top: -60px; /* Adjust this value according to your navbar height */
+    display: block; /* Ensure it shows when responsive */
+    transition: top 0.3s ease; /* Smooth transition */
+}
+
+.topnav.offscreen {
+    top: -60px; /* Adjust this value based on your navbar height */
     transition: top 0.3s ease; /* Smooth transition */
 }
 
