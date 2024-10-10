@@ -18,7 +18,7 @@
   <input type="text" class="sticky" id="search-bar" placeholder="Search...">
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-<button onclick="toggleNavbar()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
 
 
   
@@ -29,79 +29,61 @@
 
 
 
-<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
-
+<button id="myBtnTwo" onclick="toggleNavbar()">Toggle Navbar</button>
 <script>
-// Function to change the text between "Milton Christian Fellowship" and "MCF"
-function changeText() {
-  var titleElement = document.getElementById("mcf-text");
-  
-  if (window.innerWidth <= 600) {
-    titleElement.innerHTML = "MCF";
-  } else {
-    titleElement.innerHTML = "Milton Christian Fellowship";
-  }
-}
-
-// Call the function on page load to check the initial screen size
-window.onload = changeText;
-
-// Call the function when the window is resized
-window.onresize = changeText;
-
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-  
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let mybutton = document.getElementById("myBtn");
-    let mybutton2 = document.getElementById("myBtnTwo");
-    let topnav = document.getElementById("myTopnav");
-
-    window.onscroll = function() {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
+        // Function to change the text between "Milton Christian Fellowship" and "MCF"
+        function changeText() {
+            var titleElement = document.getElementById("mcf-text");
+            if (window.innerWidth <= 600) {
+                titleElement.innerHTML = "MCF";
+            } else {
+                titleElement.innerHTML = "Milton Christian Fellowship";
+            }
         }
-    }
 
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+        // Call the function on page load to check the initial screen size
+        window.onload = changeText;
 
-    // Hamburger button functionality
-    document.querySelector('.icon').onclick = function() {
-        if (topnav.classList.contains("responsive")) {
-            topnav.classList.remove("responsive"); // Collapse the menu
-        } else {
-            topnav.classList.add("responsive"); // Expand the menu
+        // Call the function when the window is resized
+        window.onresize = changeText;
+
+        // Hamburger menu function
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-    };
 
-    // Toggle button functionality
-    mybutton2.onclick = function() {
-        if (topnav.classList.contains("offscreen")) {
-            topnav.classList.remove("offscreen"); // Bring navbar back into view
-        } else {
-            topnav.classList.add("offscreen"); // Push navbar off the screen
+        // Toggle navbar function
+        function toggleNavbar() {
+            var topnav = document.getElementById("myTopnav");
+            if (topnav.classList.contains("offscreen")) {
+                topnav.classList.remove("offscreen"); // Bring navbar back into view
+            } else {
+                topnav.classList.add("offscreen"); // Push navbar off the screen
+            }
         }
-    };
 
-    mybutton.onclick = topFunction;
-});
+        // Scroll to top function
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Show/hide the "Top" button on scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            let mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            };
+        });
 </script>
 </body>
 </html>
