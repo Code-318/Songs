@@ -29,8 +29,3 @@ p {
   background-color: #555;
 }
 
-@media screen and (max-width: 600px) {
-  #myBtnTwo {
-    display: none;
-  }
-}
