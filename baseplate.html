@@ -60,12 +60,15 @@ function myFunction() {
 </script>
   
 <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
     let mybutton = document.getElementById("myBtn");
     let mybutton2 = document.getElementById("myBtnTwo");
     let topnav = document.getElementById("myTopnav");
 
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -90,7 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     mybutton.onclick = topFunction;
     mybutton2.onclick = navFunction;
+
+    // Assign the hamburger menu button to the same navFunction
+    document.querySelector('.icon').onclick = navFunction;
 });
+</script>
+
 </script>
 </body>
 </html>
