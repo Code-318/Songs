@@ -85,11 +85,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function navFunction() {
-    var x = document.getElementById("myTopnav"); // Change 'topnav' to 'myTopnav'
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    var x = document.getElementById("myTopnav");
+    var mybutton2 = document.getElementById("myBtnTwo");
+    
+    if (x.className === "topnav") {
+        x.className += " responsive"; // Add responsive class to move navbar up
+        mybutton2.style.top = "48px"; // Adjust button position when navbar is visible
     } else {
-        x.style.display = "none";
+        x.className = "topnav"; // Remove responsive class to move navbar down
+        mybutton2.style.top = "0"; // Reset button position when navbar is hidden
       }
     } 
 
