@@ -84,14 +84,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function myFunction() {
-    console.log("Hamburger clicked"); // Add this line
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
     } else {
         x.className = "topnav";
-      }
     }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
     // Attach the topFunction to the myBtn button
     mybutton.onclick = topFunction;
 
