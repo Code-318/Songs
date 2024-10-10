@@ -85,14 +85,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function navFunction() {
-        if (topnav.style.top === "-48px") {
-            topnav.style.top = "0";
-            mybutton2.style.top = "48px";
-        } else {
-            topnav.style.top = "-48px";
-            mybutton2.style.top = "0";  // Adjust as needed
-        }
-    }
+    var x = document.getElementById("myTopnav"); // Change 'topnav' to 'myTopnav'
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+      }
+    } 
 
     // Attach the topFunction to the myBtn button
     mybutton.onclick = topFunction;
