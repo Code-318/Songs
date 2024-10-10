@@ -200,6 +200,17 @@ h3 {
   background-color: #1E90FF;
   color: white;
 }
+
+#mcf-text::before {
+  content: "Milton Christian Fellowship";
+}
+
+/* For screen sizes below 600px, change the text to 'MCF' */
+@media screen and (max-width: 600px) {
+  #mcf-text::before {
+    content: "MCF";
+  }
+}
   
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .topnav input.sticky {
@@ -243,7 +254,7 @@ h3 {
   <a href="Contact.html">Contact</a>
   <a href="Songs.html">Song Index</a>
   <div class="MCF">
-    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+  <a href="Home.html"><h1><span id="mcf-text">Milton Christian Fellowship</span></h1></a>
   </div>
   <input type="text" class="sticky" id="search-bar" placeholder="Search...">
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
