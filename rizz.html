@@ -267,7 +267,7 @@ h3 {
 </head>
 <body>
 
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="topnav">
   <a href="Home.html" class="active">Home</a>
   <a href="News.html">News</a>
   <a href="Contact.html">Contact</a>
@@ -337,7 +337,7 @@ window.onload = changeText;
 window.onresize = changeText;
 
 function myFunction() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("topnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
