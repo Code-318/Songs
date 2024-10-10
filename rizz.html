@@ -298,7 +298,24 @@ Made in 1985 by StraightWay Music and Mountain Spring Music<br><br>
 <br><br><strong>Living Waters Village:</strong><br> Set in the heart of the West Kalimantan Jungle, Living Waters Village has grown to be a home for over 700 Dayak children. <br>Living Waters Village is truly a Miracle Zone. 
 <br></a><a href="https://www.livingwatersvillage.com/"><img style="width:42px;height:42px;border-radius:50%;border-style:solid;border-width:2px;" src="livingWaters.png"></a><a>
 </a></li></ul>
-    
+
+<script>
+  function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+</script>
+  
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
