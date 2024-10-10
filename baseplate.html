@@ -97,6 +97,15 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     } 
 
+    function navFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive"; // Add the responsive class to trigger the CSS
+    } else {
+        x.className = "topnav"; // Remove the responsive class
+      }
+    }
+
     // Attach the topFunction to the myBtn button
     mybutton.onclick = topFunction;
 
