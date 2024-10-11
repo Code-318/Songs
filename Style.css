@@ -147,7 +147,11 @@ body {margin:0;}
     display: none;
   }
 }
-  
+
+.topnav a.icon {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .topnav input.sticky {
     display: none;
@@ -158,6 +162,7 @@ body {margin:0;}
     padding: 0;
     margin-top: -2px;
     font-size: 36.5px;
+    display: initial;
   }
   .topnav.responsive {
     position: relative;
