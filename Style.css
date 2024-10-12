@@ -85,12 +85,12 @@ body {margin:0;}
 
 .topnav {
     transition: top 0.3s ease; /* Add transition for smooth sliding */
-    position: relative; /* Ensure position is relative for top property */
+    position: fixed; /* Ensure position is relative for top property */
     top: 0; /* Initial position */
 }
 
 .topnav.responsive {
-    position: relative; /* Or 'absolute', depending on your layout */
+    position: fixed; /* Or 'absolute', depending on your layout */
 }
 
 .topnav.responsive a {
@@ -165,7 +165,7 @@ body {margin:0;}
     display: initial;
   }
   .topnav.responsive {
-    position: relative;
+    position: fixed;
   }
   .topnav.responsive a.icon {
     position: absolute;
