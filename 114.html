@@ -11,13 +11,15 @@
   <a href="Home.html">Home</a>
   <a href="News.html">News</a>
   <a href="Contact.html">Contact</a>
-  <a href="Songs.html">Song Index</a>
+  <a href="Songs.html" class="active">Song Index</a>
   <div class="MCF">
-    <a href="Home.html"><h1>Milton Christian Fellowship</h1></a>
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
   </div>
   <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
 <h2>114. Ding dong! Merrily on high</h2>
 <p>
 Ding dong, merrily on high!<br>
@@ -39,49 +41,44 @@ your evetime song, ye singers.<br>
 <i>Gloria, hosannah in excelsis!<br>
 Gloria, hosannah in excelsis!</i><br>
 </p>
+
 <button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
-
 <script>
-// Ensure the script runs after the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the buttons
-    let mybutton = document.getElementById("myBtn");
-    let mybutton2 = document.getElementById("myBtnTwo");
-    let topnav = document.getElementById("topnav");
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
+// Call the function when the window is resized
+window.onresize = changeText;
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
-    function navFunction() {
+function navFunction() {
         if (topnav.style.top === "-48px") {
             topnav.style.top = "0";
-            mybutton2.style.top = "48px";
+            myBtnTwo.style.top = "48px";
         } else {
             topnav.style.top = "-48px";
-            mybutton2.style.top = "0";  // Adjust as needed
+            myBtnTwo.style.top = "0";  // Adjust as needed
         }
     }
-
-    // Attach the topFunction to the myBtn button
-    mybutton.onclick = topFunction;
-
-    // Attach the navFunction to the myBtnTwo button
-    mybutton2.onclick = navFunction;
-});
 </script>
 </body>
 </html>
