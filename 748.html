@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>748. What a wonderful change</h2>
+<p>
+What a wonderful change in my life has been wrought<br>
+Since Jesus came into my heart!<br>
+I have light in my soul for which long I have sought,<br>
+Since Jesus came into my heart!<br>
+<i><br>
+Since Jesus came into my heart,<br>
+Since Jesus came into my heart,<br>
+Floods of joy o'er my soul like the sea billows roll,<br>
+Since Jesus came into my heart.</i><br><br>
+2 I have ceased from my wand'ring and going astray,<br>
+Since Jesus came into my heart!<br>
+And my sins which were many are all washed away,<br>
+Since Jesus came into my heart!<br><br>
+3 I’m possessed of a hope that is steadfast and sure,<br>
+Since Jesus came into my heart!<br>
+And no dark clouds of doubt now my pathway obscure,<br>
+Since Jesus came into my heart! <br><br>
+4 There's a light in the valley of death now for me,<br>
+Since Jesus came into my heart!<br>
+And the gates of the City beyond I can see,<br>
+Since Jesus came into my heart! <br><br>
+5 I shall go there to dwell in that city, I know,<br>
+Since Jesus came into my heart!<br>
+And I'm happy, so happy, as onward I go,<br>
+Since Jesus came into my heart!<br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
