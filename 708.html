@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>708. To God be the glory!</h2>
+<p>
+To God be the glory, great things he has done!<br>
+So loved he the world that he gave us his Son,<br>
+who yielded his life an atonement for sin,<br>
+and opened the life-gate that all may go in.<br>
+<i><br>
+Praise the Lord! Praise the Lord,<br>
+Let the earth hear his voice!<br>
+Praise the Lord! Praise the Lord!<br>
+Let the people rejoice!<br>
+O come to the Father through Jesus the Son<br>
+and give him the glory, great things he has done!<br></i><br>
+  
+2 O perfect redemption, the purchase of blood<br>
+To every believer the promise of God<br>
+The vilest offender who truly believes<br>
+That moment from Jesus a pardon receives  <br>
+  <br>
+3 Great things he has taught us, great things he has done,<br>
+and great our rejoicing through Jesus the Son,<br>
+but purer and higher and greater will be<br>
+our joy and our wonder, when Jesus we see. <br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
