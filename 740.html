@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>740. We three kings of Orient are</h2>
+<p>
+We three kings of Orient are;<br>
+bearing gifts we traverse afar,<br>
+field and fountain, moor and mountain,<br>
+following yonder star.<br>
+<br>
+  <i>
+O star of wonder, star of light,<br>
+star with royal beauty bright,<br>
+westward leading, still proceeding,<br>
+guide us to thy perfect light.<br></i>
+  <br>
+2 Born a King on Bethlehem's plain,<br>
+gold I bring to crown him again,<br>
+King forever, ceasing never,<br>
+over us all to reign.<br>
+  <br>
+3 Frankincense to offer have I;<br>
+incense owns a Deity nigh;<br>
+prayer and praising, voices raising,<br>
+worshiping God on high.<br>
+  <br>
+4 Myrrh is mine; its bitter perfume<br>
+breathes a life of gathering gloom;<br>
+sorrowing, sighing, bleeding, dying,<br>
+sealed in the stone-cold tomb.<br>
+  <br>
+5 Glorious now behold him arise;<br>
+King and God and sacrifice:<br>
+Alleluia, Alleluia,<br>
+sounds through the earth and skies.<br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
