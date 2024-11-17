@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>764. While shepherds watched</h2>
+<p>
+While shepherds watched their flocks by night,<br>
+all seated on the ground,<br>
+an angel of the Lord came down,<br>
+and glory shone around.<br><br>
+2 "Fear not," said he for mighty dread<br>
+had seized their troubled mind<br>
+"glad tidings of great joy I bring<br>
+to you and all mankind.<br><br>
+3 "To you, in David's town, this day<br>
+is born of David's line<br>
+a Savior, who is Christ the Lord;<br>
+and this shall be the sign:<br><br>
+4 "The heavenly babe you there shall find<br>
+to human view displayed,<br>
+all simply wrapped in swaddling clothes<br>
+and in a manger laid."<br><br>
+5 Thus spake the angel; and forthwith<br>
+appeared a shining throng<br>
+of angels praising God, who thus<br>
+addressed their joyful song:<br><br>
+6 "All glory be to God on high,<br>
+and to the earth be peace;<br>
+to those on whom his favor rests<br>
+goodwill shall never cease."<br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
