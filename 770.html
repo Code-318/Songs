@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+  margin-top: 50px;
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 50px;
+}
+
+p {
+  text-align: center;
+  font-size: 40px;
+}
+
+#myBtnTwo {
+  position: fixed;
+  top: 48px;
+  right: 30px;
+  z-index: 97;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius:0 0 10px 10px;
+  transition: top 0.3s;
+}
+
+#myBtnTwo:hover {
+  background-color: #555;
+}
+</Style>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<img src="BB.jpeg" alt="Boys Brigade">
+<h2>770. Will your anchor hold (BB Theme)</h2>
+<p>
+Will your anchor hold <br>
+in the storms of life,<br>
+when the clouds unfold <br>
+their wings of strife?<br>
+When the strong tides lift, <br>
+and the cables strain,<br>
+will your anchor drift, <br>
+or firm remain?<br>
+<br><i>
+We have an anchor <br>
+that keeps the soul<br>
+steadfast and sure <br>
+while the billows roll;<br>
+fastened to the Rock <br>
+which cannot move,<br>
+grounded firm and deep <br>
+in the Saviour’s love!<br>
+  </i><br>
+2 Will your anchor hold <br>
+in the straits of fear,<br>
+when the breakers roar <br>
+and the reef is near?<br>
+While the surges rage, <br>
+and the wild winds blow,<br>
+shall the angry waves <br>
+then your bark o'erflow?<br>
+  <br>
+3 Will your anchor hold <br>
+in the floods of death,<br>
+when the waters cold <br>
+chill your latest breath?<br>
+On the rising tide <br>
+you can never fail,<br>
+while your anchor <br>
+holds within the veil.<br>
+  <br>
+4 Will your eyes behold <br>
+through the morning light<br>
+the city of gold and <br>
+the harbour bright?<br>
+Will you anchor safe <br>
+by the heavenly shore,<br>
+when life's storms are <br>
+past for evermore?<br>
+</p>
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
