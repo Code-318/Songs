@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>765. Who can cheer the heart</h2>
+<p>
+Who can cheer the heart like Jesus,<br>
+by His presence all divine?<br>
+True and tender, pure and precious,<br>
+O how blest to call Him mine!<br>
+<br><i>
+All that thrills my soul is Jesus,<br>
+He is more than life to me;<br>
+and the fairest of ten thousand<br>
+in my blessed Lord I see.</i><br><br>
+2 Love of Christ so freely given,<br>
+grace of God beyond degree,<br>
+mercy higher than the heaven,<br>
+deeper than the deepest sea!<br><br>
+3 What a wonderful redemption!<br>
+Never can a mortal know<br>
+how my sin, though red like crimson,<br>
+can be whiter than the snow. <br><br>
+4 Every need His hand supplying,<br>
+every good in Him I see;<br>
+on His strength divine relying,<br>
+He is all in all to me. <br><br>
+5 By the crystal flowing river<br>
+with the ransomed I will sing,<br>
+and forever and forever<br>
+praise and glorify the King.<br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
