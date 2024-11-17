@@ -150,5 +150,45 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
+  <script>
+    // Toggle Navbar
+    function toggleNavbar() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    // Change Text Based on Screen Size
+    function changeText() {
+      var titleElement = document.getElementById("mcf-text");
+      if (window.innerWidth <= 600) {
+        titleElement.innerHTML = "MCF";
+      } else {
+        titleElement.innerHTML = "Milton Christian Fellowship";
+      }
+    }
+
+    // Initial Call and Resize Listener
+    window.onload = changeText;
+    window.onresize = changeText;
+
+    // Scroll to Top Button
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>
