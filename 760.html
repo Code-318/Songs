@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>760. When we walk with the Lord</h2>
+<p>
+When we walk with the Lord<br>
+in the light of his word,<br>
+what a glory he sheds on our way!<br>
+While we do his good will,<br>
+he abides with us still,<br>
+and with all who will trust and obey.<br>
+<i><br>
+Trust and obey, <br>
+for there's no other way<br>
+to be happy in Jesus, <br>
+but to trust and obey.</i><br>
+<br>
+Not a shadow can rise, <br>
+not a cloud in the skies<br>
+But His smile quickly drives it away<br>
+Not a doubt or a fear, <br>
+not a sigh or a tear<br>
+Can abide while we trust and obey<br>
+<br>
+3 Not a burden we bear,<br>
+not a sorrow we share,<br>
+but our toil he doth richly repay;<br>
+not a grief or a loss,<br>
+not a frown or a cross,<br>
+but is blest if we trust and obey.<br>
+  <br>
+4 But we never can prove<br>
+the delights of his love<br>
+until all on the altar we lay;<br>
+for the favor he shows,<br>
+for the joy he bestows,<br>
+are for them who will trust and obey. <br>
+  <br>
+5 Then in fellowship sweet<br>
+we will sit at his feet,<br>
+or we'll walk by his side in the way;<br>
+what he says we will do,<br>
+where he sends we will go;<br>
+never fear, only trust and obey.<br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
