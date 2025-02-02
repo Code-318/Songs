@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>666. The Steadfast love of the Lord</h2>
+<p>
+The steadfast love of the Lord never ceases.<br>
+Your mercies never come to an end;<br>
+they are new every morning,<br>
+new every morning:<br>
+great is your faithfulness, O Lord,<br>
+great is your faithfulness!<br>
+<br>
+1. You, Lord, are my portion, says my soul;<br>
+therefore I will hope in you.<br>
+<br>
+2. You, Lord, are good to those who wait for you,<br>
+to the soul that seeks you;<br>
+it is good that we should wait quietly<br>
+for the salvation of the Lord.<br><br>
+
+3. The Lord will not cast off forever,<br>
+but will have compassion;<br>
+for God does not willingly<br>
+afflict or grieve the righteous ones.<br>
+<br>
+4. So let us examine all our ways,<br>
+and return to the Lord;<br>
+let us lift up our hearts and <br>
+hands to God in heaven.<br>
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
