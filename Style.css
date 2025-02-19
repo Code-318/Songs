@@ -148,6 +148,10 @@ body {margin:0;}
   }
 }
 
+p {
+  white-space: pre-line;
+}
+
 .topnav a.icon {
   display: none;
 }
