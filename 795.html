@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<style>
+p {
+  white-space: pre-line;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>795. You laid aside Your najesty</h2>
+<p>
+You laid aside, Your majesty
+Gave up everything for me
+Suffered at the hands of those You had created
+You took away my guilt and shame
+When You died and rose again
+Now today You reign
+And heaven and earth exalt You
+I really want to worship You, my Lord
+You have won my heart and I am Yours
+Forever and ever, I will love You
+You are the only one who died for me
+Gave Your life to set me free
+So I lift my voice to You in adoration
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
