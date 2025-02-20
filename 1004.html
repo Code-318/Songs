@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<style>
+p {
+  white-space: pre-line;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>1004. O God of burning, cleansing flame, send the fire!</h2>
+<p>
+O Christ of burning, cleansing flame,
+Send the fire!
+Your blood-bought gift today we claim,
+Send the fire!
+Look down and see this waiting host,
+Give us the promised Holy Ghost,
+We want another Pentecost,
+Send the fire!
+  
+God of Elijah, hear our cry:
+Send the fire!
+To make us fit to live or die,
+Send the fire!
+To burn up every trace of sin,
+To bring the light and glory in,
+The revolution now begin,
+Send the fire!
+  
+It's fire we want, for fire we plead,
+Send the fire!
+The fire will meet our every need,
+Send the fire!
+For strength to ever do the right,
+For grace to conquer in the fight,
+For power to walk the world in white,
+Send the fire!
+  
+To make our weak hearts strong and brave,
+Send the fire!
+To live a dying world to save,
+Send the fire!
+O see us on thy altar lay
+Our lives, our all, this very day,
+To crown the offering now we pray,
+Send the fire!
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
