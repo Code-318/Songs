@@ -6,12 +6,12 @@ const songs = {
 1: {
   title: "A new commandment I give unto you",
   lyrics: "A new commandment I give unto you,
-that you love one another as I have loved you,
-that you love one another as I have loved you.
-By this shall all know that you are my disciples,
-if you have love one for another;
-by this shall all know that you are my disciples:
-if you have love one for another."
+  that you love one another as I have loved you,
+  that you love one another as I have loved you.
+  By this shall all know that you are my disciples,
+  if you have love one for another;
+  by this shall all know that you are my disciples:
+  if you have love one for another."
 },
 
 2: {
