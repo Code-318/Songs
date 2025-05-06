@@ -5,18 +5,18 @@ const songId = urlParams.get('id'); // Get the 'id' parameter
 const songs = {
 1: {
   title: "A new commandment I give unto you",
-  lyrics: "A new commandment I give unto you,
+  lyrics: `A new commandment I give unto you,
   that you love one another as I have loved you,
   that you love one another as I have loved you.
   By this shall all know that you are my disciples,
   if you have love one for another;
   by this shall all know that you are my disciples:
-  if you have love one for another."
+  if you have love one for another.`
 },
 
 2: {
   title: "A safe stronghold our God is still",
-  lyrics: "A safe stronghold our God is still,
+  lyrics: `A safe stronghold our God is still,
 a trusty shield and weapon;
 he'll keep us clear from all the ill
 that hath us now o'ertaken.
@@ -54,7 +54,7 @@ And though they take our life,
 goods, honour, children, wife,
 yet is their profit small;
 these things shall vanish all:
-the city of God remaineth."
+the city of God remaineth.`
 },
 
 3: {
