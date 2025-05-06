@@ -3555,6 +3555,7 @@ if (songId && songs[songId]) {
   document.getElementById('song-title').textContent = song.title;
   document.getElementById('song-lyrics').textContent = song.lyrics;
 } else {
+  // If songId is not valid, show a "not found" message
   document.getElementById('song-title').textContent = "Song not found";
   document.getElementById('song-lyrics').textContent = "Sorry, the song you're looking for is not available.";
 }
