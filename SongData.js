@@ -59,7 +59,15 @@ the city of God remaineth.`
 
 3: {
   title: "Abba Father, let me be",
-  lyrics: "Sorry we have not yet added MP 3 here."
+  lyrics: `Abba, Father, let me be
+Yours and Yours alone.
+May my will for ever be
+Evermore Your own.
+
+Never let my heart grow cold,
+Never let me go.
+Abba, Father, let me be
+Yours and Yours alone.`
 },
 
 4: {
