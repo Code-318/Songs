@@ -4,7 +4,7 @@ const songId = urlParams.get('id'); // Get the 'id' parameter
 // Song data object
 const songs = {
 1: {
-  title: "A new commandment I give unto you",
+  title: "1. A New Commandment I Give unto you",
   lyrics: `A new commandment I give unto you,
   that you love one another as I have loved you,
   that you love one another as I have loved you.
@@ -15,7 +15,7 @@ const songs = {
 },
 
 2: {
-  title: "A safe stronghold our God is still",
+  title: "2. A safe stronghold our God is still",
   lyrics: `A safe stronghold our God is still,
 a trusty shield and weapon;
 he'll keep us clear from all the ill
@@ -58,7 +58,7 @@ the city of God remaineth.`
 },
 
 3: {
-  title: "Abba Father, let me be",
+  title: "3. Abba Father, let me be",
   lyrics: `Abba, Father, let me be
 Yours and Yours alone.
 May my will for ever be
@@ -71,7 +71,7 @@ Yours and Yours alone.`
 },
 
 4: {
-  title: "Abide with me; fast falls the eventide",
+  title: "4. Abide with me; fast falls the eventide",
   lyrics: `Abide with me
 fast falls the eventide;
 the darkness deepens
@@ -119,7 +119,7 @@ O Lord, abide with me.`
 },
 
 5: {
-  title: "Above the voices of the world around me",
+  title: "5. Above the voices of the world around me",
   lyrics: `Above the voices of the world around me,
 my hopes and dreams, my cares and loves and fears,
 the long-awaited call of Christ has found me,
@@ -149,7 +149,7 @@ and in his love my new-born life begins.`
 },
 
 6: {
-  title: "Ah, Lord God",
+  title: "6. Ah, Lord God",
   lyrics: `Ah, Lord God, Thou has made the heavens
 And the earth by Thy great power
 Ah, Lord God, Thou has made the heavens
@@ -164,7 +164,7 @@ Nothing is too difficult for Thee (ah, Lord God)`
 },
 
 7: {
-  title: "All creatures of our God and King",
+  title: "7. All creatures of our God and King",
   lyrics: `All creatures of our God and King,
 lift up your voice and with us sing,
 "Alleluia! Alleluia!"
@@ -199,7 +199,7 @@ alleluia, alleluia, alleluia!`
 },
 
 8: {
-  title: "All earth was dark until You spoke",
+  title: "8. All earth was dark until You spoke",
   lyrics: `All earth was dark until you spoke,
 then all was light and all was peace.
 Yet still, O God, so many wait
@@ -227,7 +227,7 @@ that souls may search and find you there.`
 },
 
 9: {
-  title: "All glory, laud, and honour",
+  title: "9. All glory, laud, and honour",
   lyrics: `All glory, laud, and honor
 to you, Redeemer, King,
 to whom the lips of children
@@ -257,14 +257,14 @@ O good and gracious King!`
 },
 
 10: {
-  title: "All around me, Lord, I see Your goodness",
+  title: "10. All around me, Lord, I see Your goodness",
   lyrics: `All around me, Lord I see Your goodness,
 all creation sings Your praises,
 all the world cries, 'God Is Love!'`
 },
 
 11: {
-  title: "All hail King Jesus",
+  title: "11. All hail King Jesus",
   lyrics: `All hail, king Jesus! all hail, Emmanuel!
 King of kings, Lord of lords,
 bright Morning Star.
@@ -273,7 +273,7 @@ and I’ll reign with you throughout eternity.`
 },
 
 12: {
-  title: "All hail the Lamb",
+  title: "12. All hail the Lamb",
   lyrics: `All hail the Lamb
 Enthroned on high
 His praise shall be our battle cry
@@ -284,7 +284,7 @@ He is the Lord`
 },
 
 13: {
-  title: "All hail the power of Jesus' name!",
+  title: "13. All hail the power of Jesus' name!",
   lyrics: `All hail the pow’r of Jesus’ name!
 Let angels prostrate fall,
 Bring forth the royal diadem,
@@ -312,7 +312,7 @@ And crown Him Lord of all!`
 },
 
 14: {
-  title: "All heaven declares",
+  title: "14. All heaven declares",
   lyrics: `All heaven declares
 the glory of the risen Lord
 Who can compare
@@ -333,7 +333,7 @@ and worship You alone`
 },
 
 15: {
-  title: "All heaven waits with bated breath",
+  title: "15. All heaven waits with bated breath",
   lyrics: `All Heaven waits with bated breath
 For saints on earth to pray
 Majestic angels ready stand
@@ -383,7 +383,7 @@ Of a great multitude`
 },
 
 16: {
-  title: "All my hope on God is founded",
+  title: "16. All my hope on God is founded",
   lyrics: `All my hope on God is founded,
 all my trust he shall renew;
 he, my guide through changing order,
@@ -414,422 +414,422 @@ those who follow shall not fall.`
 },
 
 17: {
-  title: "All my life, Lord",
+  title: "17. All my life, Lord",
   lyrics: `Insert lyrics for song 17 here.`
 },
 
 18: {
-  title: "All over the world the Spirit is moving",
+  title: "18. All over the world the Spirit is moving",
   lyrics: `Insert lyrics for song 18 here.`
 },
 
 19: {
-  title: "All praise to our redeeming Lord",
+  title: "19. All praise to our redeeming Lord",
   lyrics: `Insert lyrics for song 19 here.`
 },
 
 20: {
-  title: "All people that on earth do dwell",
+  title: "20. All people that on earth do dwell",
   lyrics: `Insert lyrics for song 20 here.`
 },
 
 21: {
-  title: "O the blood of Jesus",
+  title: "21. O the blood of Jesus",
   lyrics: `Insert lyrics for song 21 here.`
 },
 
 22: {
-  title: "All the way my Savior leads me",
+  title: "22. All the way my Savior leads me",
   lyrics: `Insert lyrics for song 22 here.`
 },
 
 23: {
-  title: "All things bright and beautiful",
+  title: "23. All things bright and beautiful",
   lyrics: `Insert lyrics for song 23 here.`
 },
 
 24: {
-  title: "All things praise Thee, Lord most high",
+  title: "24. All things praise Thee, Lord most high",
   lyrics: `Insert lyrics for song 24 here.`
 },
 
 25: {
-  title: "All to Jesus I surrender",
+  title: "25. All to Jesus I surrender",
   lyrics: `Insert lyrics for song 25 here.`
 },
 
 26: {
-  title: "All you that pass by",
+  title: "26. All you that pass by",
   lyrics: `Insert lyrics for song 26 here.`
 },
 
 27: {
-  title: "Almighty God, we bring You praise",
+  title: "27. Almighty God, we bring You praise",
   lyrics: `Insert lyrics for song 27 here.`
 },
 
 28: {
-  title: "Almighty God, our heavenly Father",
+  title: "28. Almighty God, our heavenly Father",
   lyrics: `Insert lyrics for song 28 here.`
 },
 
 29: {
-  title: "Alleluia, Alleluia",
+  title: "29. Alleluia, Alleluia",
   lyrics: `Insert lyrics for song 29 here.`
 },
 
 30: {
-  title: "Jesus is Lord of all the earth",
+  title: "30. Jesus is Lord of all the earth",
   lyrics: `Insert lyrics for song 30 here.`
 },
 
 31: {
-  title: "Amazing grace – how sweet the sound",
+  title: "31. Amazing grace – how sweet the sound",
   lyrics: `Insert lyrics for song 31 here.`
 },
 
 32: {
-  title: "An army of ordinary people",
+  title: "32. An army of ordinary people",
   lyrics: `Insert lyrics for song 32 here.`
 },
 
 33: {
-  title: "And can it be that I should gain",
+  title: "33. And can it be that I should gain",
   lyrics: `Insert lyrics for song 33 here.`
 },
 
 34: {
-  title: "Angel voices ever singing",
+  title: "34. Angel voices ever singing",
   lyrics: `Insert lyrics for song 34 here.`
 },
 
 35: {
-  title: "Angels, from the realms of glory",
+  title: "35. Angels, from the realms of glory",
   lyrics: `Insert lyrics for song 35 here.`
 },
 
 36: {
-  title: "Behold, the darkness shall cover the earth",
+  title: "36. Behold, the darkness shall cover the earth",
   lyrics: `Insert lyrics for song 36 here.`
 },
 
 37: {
-  title: "As the deer pants for the water",
+  title: "37. As the deer pants for the water",
   lyrics: `Insert lyrics for song 37 here.`
 },
 
 38: {
-  title: "As we are gathered, Jesus is here",
+  title: "38. As we are gathered, Jesus is here",
   lyrics: `Insert lyrics for song 38 here.`
 },
 
 39: {
-  title: "As with gladness men of old",
+  title: "39. As with gladness men of old",
   lyrics: `Insert lyrics for song 39 here.`
 },
 
 40: {
-  title: "Ascribe greatness to our God the rock",
+  title: "40. Ascribe greatness to our God the rock",
   lyrics: `Insert lyrics for song 40 here.`
 },
 
 41: {
-  title: "At the name of Jesus",
+  title: "41. At the name of Jesus",
   lyrics: `Insert lyrics for song 41 here.`
 },
 
 42: {
-  title: "Earth could not contain the treasures",
+  title: "42. Earth could not contain the treasures",
   lyrics: `Insert lyrics for song 42 here.`
 },
 
 43: {
-  title: "At even, ere the sun was set",
+  title: "43. At even, ere the sun was set",
   lyrics: `Insert lyrics for song 43 here.`
 },
 
 44: {
-  title: "At Your feet, O Lord, we wait for You",
+  title: "44. At Your feet, O Lord, we wait for You",
   lyrics: `Insert lyrics for song 44 here.`
 },
 
 45: {
-  title: "At Your feet we fall, mighty risen Lord",
+  title: "45. At Your feet we fall, mighty risen Lord",
   lyrics: `Insert lyrics for song 45 here.`
 },
 
 46: {
-  title: "Put on your garments of splendour",
+  title: "46. Put on your garments of splendour",
   lyrics: `Insert lyrics for song 46 here.`
 },
 
 47: {
-  title: "Away in a manger, no crib for a bed",
+  title: "47. Away in a manger, no crib for a bed",
   lyrics: `Insert lyrics for song 47 here.`
 },
 
 48: {
-  title: "Be still and know that I am God",
+  title: "48. Be still and know that I am God",
   lyrics: `Insert lyrics for song 48 here.`
 },
 
 49: {
-  title: "Be bold, be strong",
+  title: "49. Be bold, be strong",
   lyrics: `Insert lyrics for song 49 here.`
 },
 
 50: {
-  title: "Be still, for the presence of the Lord",
+  title: "50. Be still, for the presence of the Lord",
   lyrics: `Insert lyrics for song 50 here.`
 },
 
 51: {
-  title: "Be Thou my vision, O Lord of my heart",
+  title: "51. Be Thou my vision, O Lord of my heart",
   lyrics: `Insert lyrics for song 51 here.`
 },
 
 52: {
-  title: "God sent His Son, they called Him Jesus",
+  title: "52. God sent His Son, they called Him Jesus",
   lyrics: `Insert lyrics for song 52 here.`
 },
 
 53: {
-  title: "Because Your love is better than life",
+  title: "53. Because Your love is better than life",
   lyrics: `Insert lyrics for song 53 here.`
 },
 
 54: {
-  title: "There is only one God",
+  title: "54. There is only one God",
   lyrics: `Insert lyrics for song 54 here.`
 },
 
 55: {
-  title: "Beneath the cross of Jesus",
+  title: "55. Beneath the cross of Jesus",
   lyrics: `Insert lyrics for song 55 here.`
 },
 
 56: {
-  title: "Bless the Lord, O my soul",
+  title: "56. Bless the Lord, O my soul",
   lyrics: `Insert lyrics for song 56 here.`
 },
 
 57: {
-  title: "Bless the Lord, O my soul",
+  title: "57. Bless the Lord, O my soul",
   lyrics: `Insert lyrics for song 57 here.`
 },
 
 58: {
-  title: "To see God, the Alpha and Omega",
+  title: "58. To see God, the Alpha and Omega",
   lyrics: `Insert lyrics for song 58 here.`
 },
 
 59: {
-  title: "Blessed assurance, Jesus is mine",
+  title: "59. Blessed assurance, Jesus is mine",
   lyrics: `Insert lyrics for song 59 here.`
 },
 
 60: {
-  title: "Blest be the tie that binds",
+  title: "60. Blest be the tie that binds",
   lyrics: `Insert lyrics for song 60 here.`
 },
 
 61: {
-  title: "Born by the Holy Spirit's breath",
+  title: "61. Born by the Holy Spirit's breath",
   lyrics: `Insert lyrics for song 61 here.`
 },
 
 62: {
-  title: "Born in the night, Mary's child",
+  title: "62. Born in the night, Mary's child",
   lyrics: `Insert lyrics for song 62 here.`
 },
 
 63: {
-  title: "Break forth into joy O my soul",
+  title: "63. Break forth into joy O my soul",
   lyrics: `Insert lyrics for song 63 here.`
 },
 
 64: {
-  title: "Break Thou the bread of life",
+  title: "64. Break Thou the bread of life",
   lyrics: `Insert lyrics for song 64 here.`
 },
 
 65: {
-  title: "Brightest and best of the sons of the morning",
+  title: "65. Brightest and best of the sons of the morning",
   lyrics: `Insert lyrics for song 65 here.`
 },
 
 66: {
-  title: "He offered His body, He poured out His soul",
+  title: "66. He offered His body, He poured out His soul",
   lyrics: `Insert lyrics for song 66 here.`
 },
 
 67: {
-  title: "Breathe on me, Breath of God",
+  title: "67. Breathe on me, Breath of God",
   lyrics: `Insert lyrics for song 67 here.`
 },
 
 68: {
-  title: "Cause me to come to Thy river, O Lord",
+  title: "68. Cause me to come to Thy river, O Lord",
   lyrics: `Insert lyrics for song 68 here.`
 },
 
 69: {
-  title: "Change my heart, O God",
+  title: "69. Change my heart, O God",
   lyrics: `Insert lyrics for song 69 here.`
 },
 
 70: {
-  title: "Children of Jerusalem",
+  title: "70. Children of Jerusalem",
   lyrics: `Insert lyrics for song 70 here.`
 },
 
 71: {
-  title: "Child in the manger, infant of Mary",
+  title: "71. Child in the manger, infant of Mary",
   lyrics: `Insert lyrics for song 71 here.`
 },
 
 72: {
-  title: "Christ is the answer to my every need",
+  title: "72. Christ is the answer to my every need",
   lyrics: `Insert lyrics for song 72 here.`
 },
 
 73: {
-  title: "Christ is made the sure foundation",
+  title: "73. Christ is made the sure foundation",
   lyrics: `Insert lyrics for song 73 here.`
 },
 
 74: {
-  title: "Christ is risen! hallelujah!",
+  title: "74. Christ is risen! hallelujah!",
   lyrics: `Insert lyrics for song 74 here.`
 },
 
 75: {
-  title: "Christ is surely coming, bringing His reward",
+  title: "75. Christ is surely coming, bringing His reward",
   lyrics: `Insert lyrics for song 75 here.`
 },
 
 76: {
-  title: "Christ the Lord is risen today; hallelujah!",
+  title: "76. Christ the Lord is risen today; hallelujah!",
   lyrics: `Insert lyrics for song 76 here.`
 },
 
 77: {
-  title: "Christ triumphant, ever reigning",
+  title: "77. Christ triumphant, ever reigning",
   lyrics: `Insert lyrics for song 77 here.`
 },
 
 78: {
-  title: "Christ the Way of life possess me",
+  title: "78. Christ the Way of life possess me",
   lyrics: `Insert lyrics for song 78 here.`
 },
 
 79: {
-  title: "Christ, whose glory fills the skies",
+  title: "79. Christ, whose glory fills the skies",
   lyrics: `Insert lyrics for song 79 here.`
 },
 
 80: {
-  title: "Christians, awake! salute the happy morn",
+  title: "80. Christians, awake! salute the happy morn",
   lyrics: `Insert lyrics for song 80 here.`
 },
 
 81: {
-  title: "Clap your hands, you people all",
+  title: "81. Clap your hands, you people all",
   lyrics: `Insert lyrics for song 81 here.`
 },
 
 82: {
-  title: "Cleanse me from my sin, Lord",
+  title: "82. Cleanse me from my sin, Lord",
   lyrics: `Insert lyrics for song 82 here.`
 },
 
 83: {
-  title: "See the shepherds hurry down to Bethlehem",
+  title: "83. See the shepherds hurry down to Bethlehem",
   lyrics: `Insert lyrics for song 83 here.`
 },
 
 84: {
-  title: "We come not to a mountain of fire and smoke",
+  title: "84. We come not to a mountain of fire and smoke",
   lyrics: `Insert lyrics for song 84 here.`
 },
 
 85: {
-  title: "Come and see, come and see, come and see the King of love",
+  title: "85. Come and see, come and see, come and see the King of love",
   lyrics: `Insert lyrics for song 85 here.`
 },
 
 86: {
-  title: "Come and see the shining hope that Christ apostle saw",
+  title: "86. Come and see the shining hope that Christ apostle saw",
   lyrics: `Insert lyrics for song 86 here.`
 },
 
 87: {
-  title: "Come and praise Him, royal priesthood",
+  title: "87. Come and praise Him, royal priesthood",
   lyrics: `Insert lyrics for song 87 here.`
 },
 
 88: {
-  title: "Come, bless the Lord",
+  title: "88. Come, bless the Lord",
   lyrics: `Insert lyrics for song 88 here.`
 },
 
 89: {
-  title: "Come down, O Love divine",
+  title: "89. Come down, O Love divine",
   lyrics: `Insert lyrics for song 89 here.`
 },
 
 90: {
-  title: "Come, Holy Ghost, our souls inspire",
+  title: "90. Come, Holy Ghost, our souls inspire",
   lyrics: `Insert lyrics for song 90 here.`
 },
 
 91: {
-  title: "Come, let us bow down in worship",
+  title: "91. Come, let us bow down in worship",
   lyrics: `Insert lyrics for song 91 here.`
 },
 
 92: {
-  title: "Come, let us praise the Lord",
+  title: "92. Come, let us praise the Lord",
   lyrics: `Insert lyrics for song 92 here.`
 },
 
 93: {
-  title: "Come, let us join our cheerful songs",
+  title: "93. Come, let us join our cheerful songs",
   lyrics: `Insert lyrics for song 93 here.`
 },
 
 94: {
-  title: "Come, let us sing of a wonderful love",
+  title: "94. Come, let us sing of a wonderful love",
   lyrics: `Insert lyrics for song 94 here.`
 },
 
 95: {
-  title: "Come, let us sing for joy to the Lord",
+  title: "95. Come, let us sing for joy to the Lord",
   lyrics: `Insert lyrics for song 95 here.`
 },
 
 96: {
-  title: "Come, let us worship Christ",
+  title: "96. Come, let us worship Christ",
   lyrics: `Insert lyrics for song 96 here.`
 },
 
 97: {
-  title: "Come into His presence with thanksgiving",
+  title: "97. Come into His presence with thanksgiving",
   lyrics: `Insert lyrics for song 97 here.`
 },
 
 98: {
-  title: "Come now with awe, earth's ancient vigil keeping",
+  title: "98. Come now with awe, earth's ancient vigil keeping",
   lyrics: `Insert lyrics for song 98 here.`
 },
 
 99: {
-  title: "Come on and celebrate!",
+  title: "99. Come on and celebrate!",
   lyrics: `Insert lyrics for song 99 here.`
 },
 
 100: {
-  title: "Come, see the beauty of the Lord",
+  title: "100. Come, see the beauty of the Lord",
   lyrics: `Insert lyrics for song 100 here.`
 },
 
