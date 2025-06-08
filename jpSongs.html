@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Song Index - MCF</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.buttons {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Green */
+.j {
+  border-color: #c04ff0;
+  color: purple;
+}
+
+.j:hover {
+  background-color: #c04ff0;
+  color: white;
+}
+
+.m {
+  border-color: #f5502f;
+  color: red;
+}
+
+.m:hover {
+  background-color: #f5502f;
+  color: white;
+}
+  
+#item-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.MCF {
+   float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family:Papyrus,fantasy
+}
+
+h1 {
+  text-align: center;
+}
+
+a { 
+  color: #000000;
+}
+
+#item-list li {
+    padding: 11px;
+    border-bottom: 1px solid #ddd;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 98;
+  transition: top 0.3s ease;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.topnav {
+    transition: top 0.3s ease; /* Add transition for smooth sliding */
+    position: fixed; /* Ensure position is relative for top property */
+    top: 0; /* Initial position */
+}
+
+.topnav.responsive {
+    position: fixed; /* Or 'absolute', depending on your layout */
+}
+
+.topnav.responsive a {
+    float: none; /* Stacks the links vertically */
+    display: block; /* Makes the links take up the full width */
+    text-align: left; /* Aligns text to the left */
+}
+
+.topnav.responsive input.sticky {
+    display: block; /* Shows the search bar */
+    width: 100%; /* Full width on smaller screens */
+}
+
+.topnav.responsive .MCF {
+    float: none; /* Centers the title */
+    text-align: center; /* Aligns title text */
+    width: 100%; /* Full width on smaller screens */
+}
+
+.offscreen {
+    transform: translateX(-100%); /* Moves the navbar off the screen */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.topnav a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav a.icon {
+  margin-top: -3px;
+}
+  
+@media screen and (max-width: 600px) {
+  .MCF {
+    pointer-events: none; /* Prevent clicks */
+    font-size: 14px; /* Optionally reduce the font size */
+  }
+
+  .MCF a {
+    pointer-events: none; /* Disable link functionality */
+  }
+
+  #mcf-text {
+    margin: 0;
+    padding: 0;
+  }
+  #search-bar {
+    display: inline;
+    width: 20px;
+  }
+}
+
+.topnav a.icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .topnav input.sticky {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding: 0;
+    margin-top: -2px;
+    font-size: 36.5px;
+    display: initial;
+  }
+  .topnav.responsive {
+    position: fixed;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input.sticky {
+    display: block;
+    width: 100%;
+  }
+  .topnav.responsive .MCF {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .MCF a {
+    pointer-events: none; /* Disable all click events */
+    cursor: default; /* Change cursor to default to indicate it's non-clickable */
+  }
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+body, html {
+  height: 140%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">☰</a>
+</div>
+
+<button onclick="scrollToTop()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+<br><br><br>
+<div class="buttons">
+<button class="btn m">Mission Praise</button>
+<button class="btn j">Junior Praise</button>
+</div>
+<ul id="item-list">
+
+<li style=""><a href="jp5.html">All over the world (JP5)</a></li>
+<li style=""><a href="jp6.html">All things bright and beautiful (JP6)</a></li>
+<li style=""><a href="jp10.html">Angels from the realms of glory (JP10)</a></li>
+<li style=""><a href="jp14.html">Be bold, be strong (J14P)</a></li>
+<li style=""><a href="jp16.html">Big man (JP16)</a></li>
+<li style=""><a href="jp30.html">Come, listen to my tale (JP30)</a></li>
+<li style=""><a href="jp42.html">Father, I place into Your hands (JP42)</a></li>
+<li style=""><a href="jp49.html">From the rising of the sun (JP49)</a></li>
+<li style=""><a href="jp50.html">Give me oil in my lamp (JP50)</a></li>
+<li style=""><a href="jp58.html">God sent His Son (JP58)</a></li>
+<li style=""><a href="jp71.html">Have you heard the raindrops (JP71)</a></li>
+<li style=""><a href="jp78.html">He's got the whole wide world (JP78)</a></li>
+<li style=""><a href="jp83.html">How did Moses cross the Red Sea? (JP83)</a></li>
+<li style=""><a href="jp94.html">If I were a butterfly (JP94)</a></li>
+<li style=""><a href="jp98.html">I have decided to follow Jesus (JP98)</a></li>
+<li style=""><a href="jp111.html">In the name of Jesus (JP111)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+<li style=""><a href="jp.html"> (JP)</a></li>
+</ul>
+
+<script>
+// Navbar toggle for smaller screens
+function toggleNavbar() {
+  const nav = document.getElementById("myTopnav");
+  nav.className = nav.className === "topnav" ? "topnav responsive" : "topnav";
+}
+
+// Scroll to top button
+const scrollButton = document.getElementById("myBtn");
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// Live search filter
+document.addEventListener('DOMContentLoaded', function () {
+  const searchBar = document.getElementById('search-bar');
+  const items = document.querySelectorAll('#item-list li');
+
+  searchBar.addEventListener('keyup', function () {
+    const filter = searchBar.value.toUpperCase();
+    items.forEach(item => {
+      const text = item.textContent || item.innerText;
+      item.style.display = text.toUpperCase().includes(filter) ? "" : "none";
+    });
+  });
+});
+</script>
+<script>
+    // Toggle Navbar
+    function toggleNavbar() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    // Change Text Based on Screen Size
+    function changeText() {
+      var titleElement = document.getElementById("mcf-text");
+      if (window.innerWidth <= 600) {
+        titleElement.innerHTML = "MCF";
+      } else {
+        titleElement.innerHTML = "Milton Christian Fellowship";
+      }
+    }
+
+    // Initial Call and Resize Listener
+    window.onload = changeText;
+    window.onresize = changeText;
+
+    // Scroll to Top Button
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+</body></html>
