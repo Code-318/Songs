@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<style>
+p {
+  white-space: pre-line;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>671. There is a fountain</h2>
+<p>
+There is a fountain filled with blood
+Drawn from Immanuel’s veins;
+And sinners, plunged beneath that flood,
+Lose all their guilty stains:
+
+The dying thief rejoiced to see
+That fountain in his day;
+And there may I, though vile as he,
+Wash all my sins away:
+
+I do believe, I will believe,
+That Jesus died for me!
+That on the cross He shed His blood,
+From sin to set me free.
+  
+Dear dying Lamb, Thy precious blood
+Shall never lose its power,
+Till all the ransomed church of God
+Be saved, to sin no more:
+
+E’er since by faith I saw the stream
+Thy flowing wounds supply,
+Redeeming love has been my theme,
+And shall be till I die:
+
+When this poor lisping, stammering tongue
+Lies silent in the grave,
+Then in a nobler, sweeter song,
+I’ll sing Thy power to save:
+
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
