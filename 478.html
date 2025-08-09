@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="Songs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav" id="topnav">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Songs.html" class="active">Song Index</a>
+  <div class="MCF">
+    <a href="Home.html"><h1 id="mcf-text">Milton Christian Fellowship</h1></a>
+  </div>
+  <input type="text" class="sticky" id="search-bar" placeholder="Search...">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<style>
+p {
+  white-space: pre-line;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+
+
+  
+<h2>478. My Song Is Love Unknown</h2>
+<p>
+My song is love unknown–
+my Savior’s love to me;
+love to the loveless shown,
+that they might lovely be.
+Oh, who am I, that for my sake
+my Lord should take frail flesh and die?
+  
+He came from His blest throne
+salvation to bestow;
+but men made strange, and none
+the longed for Christ would know.
+But oh, my Friend, my Friend indeed,
+who at my need His life did spend!
+  
+Sometimes they strew His way,
+and His sweet praises sing;
+resounding all the day
+hosannas to their King.
+Then “Crucify!” is all their breath,
+and for His death they thirst and cry.
+  
+Why, what hath my Lord done?
+What makes this rage and spite?
+He made the lame to run;
+He gave the blind their sight.
+Sweet injuries! Yet they at these
+themselves displease,
+and 'gainst Him rise.
+  
+They rise, and needs will have
+my dear Lord made away.
+A murderer they save;
+the Prince of Life they slay.
+Yet cheerful He to suff'ring goes,
+that He His foes from thence might free.
+  
+In life, no house, no home
+my Lord on earth might have;
+in death, no friendly tomb
+but what a stranger gave.
+What may I say? Heaven was His home;
+but mine the tomb wherein He lay.
+  
+Here might I stay and sing–
+no story so divine!
+Never was love, dear King,
+never was grief like Thine.
+This is my Friend, in whose sweet praise
+I all my days could gladly spend.
+</p>
+
+
+
+<button id="myBtnTwo" onclick="navFunction()">Toggle Navbar</button>
+<script>
+// Function to change the text between "Milton Christian Fellowship" and "MCF"
+function changeText() {
+  var titleElement = document.getElementById("mcf-text");
+  
+  if (window.innerWidth <= 600) {
+    titleElement.innerHTML = "MCF";
+  } else {
+    titleElement.innerHTML = "Milton Christian Fellowship";
+  }
+}
+
+// Call the function on page load to check the initial screen size
+window.onload = changeText;
+
+// Call the function when the window is resized
+window.onresize = changeText;
+
+function myFunction() {
+  var x = topnav;
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function navFunction() {
+        if (topnav.style.top === "-48px") {
+            topnav.style.top = "0";
+            myBtnTwo.style.top = "48px";
+        } else {
+            topnav.style.top = "-48px";
+            myBtnTwo.style.top = "0";  // Adjust as needed
+        }
+    }
+</script>
+</body>
+</html>
